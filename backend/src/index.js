@@ -33,12 +33,10 @@ io.on('connection', (socket) => {
       user: 'Swiftfox Team',
       text: `Hello ${user.name}, welcome to the chat!`,
     });
-    socket.broadcast
-      .to(user.room)
-      .emit('message', {
-        user: 'Swiftfox Team',
-        text: `${user.name} has joined!`,
-      });
+    socket.broadcast.to(user.room).emit('message', {
+      user: 'Swiftfox Team',
+      text: `${user.name} has joined!`,
+    });
 
     io.to(user.room).emit('roomData', {
       room: user.room,
@@ -72,4 +70,4 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(3333);
+server.listen(3334);
