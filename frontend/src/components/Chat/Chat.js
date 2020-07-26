@@ -17,7 +17,7 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = '178.128.153.78:3334';
+  const ENDPOINT = 'chat.natalprojetos.com.br';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
